@@ -54,8 +54,6 @@ const Converter = () => {
       const jsonData = xmlToJson(xmlDoc);
       setConvertedFileName(file.name);
       setConvertedFileBody(JSON.stringify(jsonData, null, 2));
-      console.log('File Name:', file.name);
-      console.log('File Content (JSON):', jsonData);
     };
     reader.readAsText(file);
   };
@@ -65,8 +63,6 @@ const Converter = () => {
       setErrorMessage('Please upload a .xml file before converting.');
     } else {
       readXMLFile(draggedFile);
-      console.log('convertedFileName:', convertedFileName);
-      console.log('convertedFileBody:', convertedFileBody);
       console.log('send to server');
       doConvert(convertedFileName, convertedFileBody).then(res => {
         console.log('Response from server:', res);
