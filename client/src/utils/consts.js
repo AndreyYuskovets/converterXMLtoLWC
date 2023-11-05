@@ -1,0 +1,1 @@
+export const CONVERT_ROUTE = "/convert";

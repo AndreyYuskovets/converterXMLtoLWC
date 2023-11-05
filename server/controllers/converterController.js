@@ -2,10 +2,12 @@
 class ConverterController {
   async doConvert(req, res) {
     try {
-      const object = req.body;
-      console.log('object= ', object);
+      const { fileName, fileBody } = req.body;
 
-      return res.json(JSON.stringify(object));
+      console.log('fileName= ', fileName);
+      console.log('fileBody= ', fileBody);
+
+      return res.json(JSON.stringify('{"test":"test1"'));
 
     } catch (e) {
       return res.status(400).json({ message: `Server error: ${e.message}` });
