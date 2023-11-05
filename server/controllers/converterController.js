@@ -1,16 +1,11 @@
-var convertXMLtoJS = require('xml-js');
 
 class ConverterController {
   async doConvert(req, res) {
     try {
-      const xml = req.body;
+      const object = req.body;
+      console.log('object= ', object);
 
-      console.log('xml= ', xml);
-
-      //let obj = convertXMLtoJS.xml2json(xml, {compact: true, spaces: 2});
-      //console.log('obj= ', obj);
-
-      return res.json({ status: 'success' });
+      return res.json(JSON.stringify(object));
 
     } catch (e) {
       return res.status(400).json({ message: `Server error: ${e.message}` });
