@@ -1,0 +1,88 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.converter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.drag-drop-container {
+  border: 2px dashed #4a90e2;
+  width: 20%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  color: #4a90e2;
+  border-style: dashed;
+  border-width: 2px;
+  padding: 10px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.drag-drop-container.drag-over {
+  background-color: rgba(74, 144, 226, 0.1);
+}
+
+.drag-drop-container.drag-over, .drag-drop-container.drag-over p {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: inherit;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+}
+
+.file-icon {
+  margin-right: 10px;
+}
+
+.error-message {
+  color: #ff9900;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.error-icon {
+  margin-right: 10px;
+}
+
+.custom-button {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+}
