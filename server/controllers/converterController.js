@@ -7,7 +7,7 @@ class ConverterController {
       console.log('fileName= ', fileName);
       console.log('fileBody= ', fileBody);
 
-      return res.json(JSON.stringify(fileBody));
+      return res.json(fileBody);
 
     } catch (e) {
       return res.status(400).json({ message: `Server error: ${e.message}` });
