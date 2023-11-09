@@ -16,8 +16,21 @@ const Converter = () => {
   const [currentStep, setCurrentStep] = useState(0);
 
   const handleStepClick = (stepIndex) => {
-    setCurrentStep(stepIndex);
+    switch(stepIndex) {
+      case 0:
+        setCurrentStep(0);
+        break;
+      case 1:
+        fileName !== '' ? setCurrentStep(1) : console.log('err');
+        break;
+      case 2:
+        setCurrentStep(2);
+        break;
+    }
+    
   };
+
+
 
   const handleFileUpload = (layoutList, fileName) => {
     console.log('test');
